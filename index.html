@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabrika Coffee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Wow-moment: Custom Cursor -->
+    <div class="custom-cursor" id="customCursor"></div>
+
+    <!-- Header / Navigation -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="#" class="logo">FABRIKA COFFEE</a>
+            
+            <div class="header-controls">
+                <nav class="nav-links">
+                    <a href="#about" data-i18n="nav_about">O nama</a>
+                    <a href="#menu" data-i18n="nav_menu">Meni</a>
+                    <a href="#contact" data-i18n="nav_contact">Lokacije</a>
+                </nav>
+
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="sr">SR</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="ru">RU</button>
+                </div>
+
+                <button class="burger-menu" id="burgerMenu" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Dropdown -->
+        <div class="mobile-nav" id="mobileNav">
+            <a href="#about" class="mob-link" data-i18n="nav_about">O nama</a>
+            <a href="#menu" class="mob-link" data-i18n="nav_menu">Meni</a>
+            <a href="#contact" class="mob-link" data-i18n="nav_contact">Lokacije</a>
+            <div class="mob-langs">
+                <button class="lang-btn active" data-lang="sr">SR</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="ru">RU</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <span class="eyebrow" data-i18n="hero_eyebrow">Specijalitet kafe u Crnoj Gori</span>
+                    <h1 class="hero-title" data-i18n="hero_title">Vrhunska kafandžijska umetnost</h1>
+                    <p class="hero-subtitle" data-i18n="hero_subtitle">5 lokacija u Podgorici i Herceg-Novom</p>
+                    
+                    <div class="hero-cta-group">
+                        <a href="https://glovoapp.com/sr/me/podgorica/stores/fabrika-coffee-pdg?utm_medium=organic&utm_campaign=google_reserve_place_order_action&utm_source=google" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-i18n="hero_cta_primary">Naruči preko Glova</a>
+                        <a href="https://www.instagram.com/fabrikacoffeecg?igsh=MWw1bjM3cmU0ZW1ldA==" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" data-i18n="hero_cta_secondary">Pogledaj Instagram</a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="glass-parallax-wrapper" id="glassParallax">
+                        <img src="assets/img_01.jpg" alt="Iced Coffee" class="hero-glass-img">
+                    </div>
+                    <div class="status-badge">
+                        <span class="pulse-dot"></span>
+                        <span data-i18n="hero_status">5 точек в Черногории / 5 lokacija</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="container about-grid">
+                <div class="about-card">
+                    <h2 class="section-title" data-i18n="about_heading">Naša filozofija i pristup</h2>
+                    <p class="about-body" data-i18n="about_body">
+                        Fabrika Coffee donosi beskompromisni pristup vrhunskom espresu, probranom zrnevlju i modernim metodama pripreme kafe kao što su V60, Nitro i Cold Brew. Naš prostor odlikuje toplo žuto svetlo, pažljivo odabrana zrna 100% arabike, kao i pažljivo praćeni mikrolotovi iz Kolumbije i Kenije. Svaka šoljica kafe je rezultat posvećenog rada naših barista i ljubavi prema zanatu.
+                    </p>
+                    <div class="facts-pill-row">
+                        <span class="fact-tag">100% Arabica</span>
+                        <span class="fact-tag">Single Origin Colombia & Kenya</span>
+                        <span class="fact-tag">V60 & Nitro</span>
+                    </div>
+                </div>
+
+                <div class="about-images">
+                    <div class="img-wrapper img-beans">
+                        <img src="assets/img_02.jpg" alt="Coffee beans">
+                    </div>
+                    <div class="img-wrapper img-v60">
+                        <img src="assets/img_03.jpg" alt="V60 brewing">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section class="menu-section" id="menu">
+            <div class="menu-sticky-header">
+                <div class="container">
+                    <div class="chips-bar" id="menuChips">
+                        <button class="chip-btn active" data-category="drinks" data-i18n="menu_cat_drinks">Kafa & Napici</button>
+                        <button class="chip-btn" data-category="food" data-i18n="menu_cat_food">Hrana & Peciva</button>
+                        <button class="chip-btn" data-category="beans" data-i18n="menu_cat_beans">Kafa u Zrnu & Hario</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container menu-content-grid">
+                <!-- Left: Dynamic Highlight Dish -->
+                <div class="menu-highlight-panel">
+                    <div class="highlight-image-card">
+                        <img src="assets/img_04.jpg" alt="Avocado salmon croissant" id="highlightImg">
+                        <div class="highlight-overlay">
+                            <span class="highlight-label" data-i18n="highlight_title">Specijalitet kuće</span>
+                            <h3 id="highlightName">Avokado-losos kroasan</h3>
+                            <p id="highlightDesc">avokado, dimljeni file lososa, krem sir, cherry paradajz, domaći sos, biber</p>
+                            <span class="highlight-price">4.20€</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Categories & Items -->
+                <div class="menu-lists-wrapper">
+                    <!-- Category 1: Drinks -->
+                    <div class="menu-category-content active" id="cat-drinks">
+                        <div class="sub-category-block">
+                            <h3 class="sub-cat-title">HOUSE BLEND (100% arabika)</h3>
+                            <ul class="menu-items-list" data-item-name="Espresso 9gr" data-item-desc="HOUSE BLEND (100% arabika)" data-item-price="1.40€">
+                                <li><span class="m-name">Espresso 9gr</span><span class="m-dots"></span><span class="m-price">1.40€</span></li>
+                                <li class="m-desc">HOUSE BLEND (100% arabika)</li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Dupli espresso 18gr" data-item-desc="HOUSE BLEND (100% arabika)" data-item-price="2.50€">
+                                <li><span class="m-name">Dupli espresso 18gr</span><span class="m-dots"></span><span class="m-price">2.50€</span></li>
+                                <li class="m-desc">HOUSE BLEND (100% arabika)</li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Amerikano 140ml" data-item-desc="HOUSE BLEND (100% arabika), (dupli espreso)" data-item-price="2.50€">
+                                <li><span class="m-name">Amerikano 140ml</span><span class="m-dots"></span><span class="m-price">2.50€</span></li>
+                                <li class="m-desc">HOUSE BLEND (100% arabika), (dupli espreso)</li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Machiatto 70ml" data-item-desc="HOUSE BLEND (100% arabika)" data-item-price="1.60€">
+                                <li><span class="m-name">Machiatto 70ml</span><span class="m-dots"></span><span class="m-price">1.60€</span></li>
+                                <li class="m-desc">HOUSE BLEND (100% arabika)</li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Cortado 100ml" data-item-desc="HOUSE BLEND (100% arabika)" data-item-price="1.80€">
+                                <li><span class="m-name">Cortado 100ml</span><span class="m-dots"></span><span class="m-price">1.80€</span></li>
+                                <li class="m-desc">HOUSE BLEND (100% arabika)</li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Cappuccino 140ml" data-item-desc="HOUSE BLEND (100% arabika)" data-item-price="2.30€">
+                                <li><span class="m-name">Cappuccino 140ml</span><span class="m-dots"></span><span class="m-price">2.30€</span></li>
+                                <li class="m-desc">HOUSE BLEND (100% arabika)</li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Latte 220ml" data-item-desc="HOUSE BLEND (100% arabika)" data-item-price="2.40€">
+                                <li><span class="m-name">Latte 220ml</span><span class="m-dots"></span><span class="m-price">2.40€</span></li>
+                                <li class="m-desc">HOUSE BLEND (100% arabika)</li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Flat white 140ml" data-item-desc="HOUSE BLEND (100% arabika)" data-item-price="3.50€">
+                                <li><span class="m-name">Flat white 140ml</span><span class="m-dots"></span><span class="m-price">3.50€</span></li>
+                                <li class="m-desc">HOUSE BLEND (100% arabika)</li>
+                            </ul>
+                        </div>
+
+                        <div class="sub-category-block">
+                            <h3 class="sub-cat-title">SINGLE ORIGIN (Colombia/Kenya)</h3>
+                            <ul class="menu-items-list" data-item-name="Espresso 10gr" data-item-desc="SINGLE ORIGIN (Colombia/Kenya)" data-item-price="2.00€">
+                                <li><span class="m-name">Espresso 10gr</span><span class="m-dots"></span><span class="m-price">2.00€</span></li>
+                                <li class="m-desc">SINGLE ORIGIN (Colombia/Kenya)</li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Dupli espresso 21gr" data-item-desc="SINGLE ORIGIN (Colombia/Kenya)" data-item-price="3.00€">
+                                <li><span class="m-name">Dupli espresso 21gr</span><span class="m-dots"></span><span class="m-price">3.00€</span></li>
+                                <li class="m-desc">SINGLE ORIGIN (Colombia/Kenya)</li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Macchiato 80ml" data-item-desc="SINGLE ORIGIN (Colombia/Kenya)" data-item-price="2.20€">
+                                <li><span class="m-name">Macchiato 80ml</span><span class="m-dots"></span><span class="m-price">2.20€</span></li>
+                                <li class="m-desc">SINGLE ORIGIN (Colombia/Kenya)</li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Cortado 100ml" data-item-desc="SINGLE ORIGIN (Colombia/Kenya)" data-item-price="2.40€">
+                                <li><span class="m-name">Cortado 100ml</span><span class="m-dots"></span><span class="m-price">2.40€</span></li>
+                                <li class="m-desc">SINGLE ORIGIN (Colombia/Kenya)</li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Cappuccino 140ml" data-item-desc="SINGLE ORIGIN (Colombia/Kenya)" data-item-price="2.60€">
+                                <li><span class="m-name">Cappuccino 140ml</span><span class="m-dots"></span><span class="m-price">2.60€</span></li>
+                                <li class="m-desc">SINGLE ORIGIN (Colombia/Kenya)</li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Latte 22ml" data-item-desc="SINGLE ORIGIN (Colombia/Kenya)" data-item-price="2.80€">
+                                <li><span class="m-name">Latte 22ml</span><span class="m-dots"></span><span class="m-price">2.80€</span></li>
+                                <li class="m-desc">SINGLE ORIGIN (Colombia/Kenya)</li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Flat White 140ml" data-item-desc="SINGLE ORIGIN (Colombia/Kenya)" data-item-price="4.00€">
+                                <li><span class="m-name">Flat White 140ml</span><span class="m-dots"></span><span class="m-price">4.00€</span></li>
+                                <li class="m-desc">SINGLE ORIGIN (Colombia/Kenya)</li>
+                            </ul>
+                        </div>
+
+                        <div class="sub-category-block">
+                            <h3 class="sub-cat-title" data-i18n="sub_flavored">Kafa sa ukusima i ledena kafa</h3>
+                            <ul class="menu-items-list" data-item-name="Latte vanilla 220ml" data-item-desc="" data-item-price="3.00€">
+                                <li><span class="m-name">Latte vanilla 220ml</span><span class="m-dots"></span><span class="m-price">3.00€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Salted caramel latte 220ml" data-item-desc="" data-item-price="3.00€">
+                                <li><span class="m-name">Salted caramel latte 220ml</span><span class="m-dots"></span><span class="m-price">3.00€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Pumpkin spiced latte 220ml" data-item-desc="" data-item-price="3.00€">
+                                <li><span class="m-name">Pumpkin spiced latte 220ml</span><span class="m-dots"></span><span class="m-price">3.00€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Matcha latte 220ml" data-item-desc="" data-item-price="3.60€">
+                                <li><span class="m-name">Matcha latte 220ml</span><span class="m-dots"></span><span class="m-price">3.60€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Iced latte vanilla 350ml" data-item-desc="" data-item-price="3.30€">
+                                <li><span class="m-name">Iced latte vanilla 350ml</span><span class="m-dots"></span><span class="m-price">3.30€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Iced caramel latte 350ml" data-item-desc="" data-item-price="3.30€">
+                                <li><span class="m-name">Iced caramel latte 350ml</span><span class="m-dots"></span><span class="m-price">3.30€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Iced matcha latte 350ml" data-item-desc="" data-item-price="3.30€">
+                                <li><span class="m-name">Iced matcha latte 350ml</span><span class="m-dots"></span><span class="m-price">3.30€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Espresso tonic 350ml" data-item-desc="(double espresso)" data-item-price="4.50€">
+                                <li><span class="m-name">Espresso tonic 350ml</span><span class="m-dots"></span><span class="m-price">4.50€</span></li>
+                                <li class="m-desc">(double espresso)</li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Iced Latte 350ml" data-item-desc="" data-item-price="2.80€">
+                                <li><span class="m-name">Iced Latte 350ml</span><span class="m-dots"></span><span class="m-price">2.80€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Iced americano 300ml" data-item-desc="" data-item-price="2.60€">
+                                <li><span class="m-name">Iced americano 300ml</span><span class="m-dots"></span><span class="m-price">2.60€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Bumble 350ml" data-item-desc="Cijeđena narandža, espresso, sirup od lavande" data-item-price="4.50€">
+                                <li><span class="m-name">Bumble 350ml</span><span class="m-dots"></span><span class="m-price">4.50€</span></li>
+                                <li class="m-desc">Cijeđena narandža, espresso, sirup od lavande</li>
+                            </ul>
+                        </div>
+
+                        <div class="sub-category-block">
+                            <h3 class="sub-cat-title" data-i18n="sub_filter">Filter kafa i nitro</h3>
+                            <ul class="menu-items-list" data-item-name="Cold brew 220ml" data-item-desc="" data-item-price="3.80€">
+                                <li><span class="m-name">Cold brew 220ml</span><span class="m-dots"></span><span class="m-price">3.80€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Hario V60 300ml" data-item-desc="(ask for the beans)" data-item-price="5.00€">
+                                <li><span class="m-name">Hario V60 300ml</span><span class="m-dots"></span><span class="m-price">5.00€</span></li>
+                                <li class="m-desc">(ask for the beans)</li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Cold brew + tonic 350ml" data-item-desc="" data-item-price="6.00€">
+                                <li><span class="m-name">Cold brew + tonic 350ml</span><span class="m-dots"></span><span class="m-price">6.00€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="NITRO COLD BREW 220mlml" data-item-desc="" data-item-price="4.50€">
+                                <li><span class="m-name">NITRO COLD BREW 220mlml</span><span class="m-dots"></span><span class="m-price">4.50€</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="sub-category-block">
+                            <h3 class="sub-cat-title" data-i18n="sub_teas">Čajevi</h3>
+                            <ul class="menu-items-list" data-item-name="Zeleni čaj sa jasminom 280ml" data-item-desc="" data-item-price="2.80€">
+                                <li><span class="m-name">Zeleni čaj sa jasminom 280ml</span><span class="m-dots"></span><span class="m-price">2.80€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Aloe vera 280ml" data-item-desc="" data-item-price="2.80€">
+                                <li><span class="m-name">Aloe vera 280ml</span><span class="m-dots"></span><span class="m-price">2.80€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Brusnica i borovnica 280ml" data-item-desc="" data-item-price="2.80€">
+                                <li><span class="m-name">Brusnica i borovnica 280ml</span><span class="m-dots"></span><span class="m-price">2.80€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Mango 280ml" data-item-desc="" data-item-price="2.80€">
+                                <li><span class="m-name">Mango 280ml</span><span class="m-dots"></span><span class="m-price">2.80€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Kamilica 250ml" data-item-desc="" data-item-price="2.80€">
+                                <li><span class="m-name">Kamilica 250ml</span><span class="m-dots"></span><span class="m-price">2.80€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Limun i đumbir 280ml" data-item-desc="" data-item-price="2.80€">
+                                <li><span class="m-name">Limun i đumbir 280ml</span><span class="m-dots"></span><span class="m-price">2.80€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Earl Gray Bergamot 280ml" data-item-desc="" data-item-price="2.80€">
+                                <li><span class="m-name">Earl Gray Bergamot 280ml</span><span class="m-dots"></span><span class="m-price">2.80€</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="sub-category-block">
+                            <h3 class="sub-cat-title" data-i18n="sub_soft">Bezalkoholna pića i sokovi</h3>
+                            <ul class="menu-items-list" data-item-name="Limunada 350ml" data-item-desc="" data-item-price="2.20€">
+                                <li><span class="m-name">Limunada 350ml</span><span class="m-dots"></span><span class="m-price">2.20€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Cijeđena narandža 200ml" data-item-desc="" data-item-price="2.80€">
+                                <li><span class="m-name">Cijeđena narandža 200ml</span><span class="m-dots"></span><span class="m-price">2.80€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Narandza/Limun/Djumbir 200ml" data-item-desc="" data-item-price="3.40€">
+                                <li><span class="m-name">Narandza/Limun/Djumbir 200ml</span><span class="m-dots"></span><span class="m-price">3.40€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Grejpfrut/Narandza 200ml" data-item-desc="" data-item-price="3.40€">
+                                <li><span class="m-name">Grejpfrut/Narandza 200ml</span><span class="m-dots"></span><span class="m-price">3.40€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Cvekla/Sargarepa/Jabuka" data-item-desc="" data-item-price="3.40€">
+                                <li><span class="m-name">Cvekla/Sargarepa/Jabuka</span><span class="m-dots"></span><span class="m-price">3.40€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Celer, limeta, jabuka 200ml" data-item-desc="" data-item-price="3.40€">
+                                <li><span class="m-name">Celer, limeta, jabuka 200ml</span><span class="m-dots"></span><span class="m-price">3.40€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Ledeni čaj malina 350ml" data-item-desc="" data-item-price="2.80€">
+                                <li><span class="m-name">Ledeni čaj malina 350ml</span><span class="m-dots"></span><span class="m-price">2.80€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Ledeni čaj lavanda & soda 350ml" data-item-desc="" data-item-price="3.20€">
+                                <li><span class="m-name">Ledeni čaj lavanda & soda 350ml</span><span class="m-dots"></span><span class="m-price">3.20€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Ledeni čaj Jagoda & Soda 350ml" data-item-desc="jagoda puree, soda voda, supasawa" data-item-price="3.20€">
+                                <li><span class="m-name">Ledeni čaj Jagoda & Soda 350ml</span><span class="m-dots"></span><span class="m-price">3.20€</span></li>
+                                <li class="m-desc">jagoda puree, soda voda, supasawa</li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Ledeni čaj Mango & Soya 350ml" data-item-desc="mango puree, sojino mlijeko, supasawa" data-item-price="3.20€">
+                                <li><span class="m-name">Ledeni čaj Mango & Soya 350ml</span><span class="m-dots"></span><span class="m-price">3.20€</span></li>
+                                <li class="m-desc">mango puree, sojino mlijeko, supasawa</li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Kisela voda 0.25l" data-item-desc="" data-item-price="1.60€">
+                                <li><span class="m-name">Kisela voda 0.25l</span><span class="m-dots"></span><span class="m-price">1.60€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Suza 0.25l" data-item-desc="" data-item-price="1.60€">
+                                <li><span class="m-name">Suza 0.25l</span><span class="m-dots"></span><span class="m-price">1.60€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Crna čokolada 250ml" data-item-desc="" data-item-price="2.80€">
+                                <li><span class="m-name">Crna čokolada 250ml</span><span class="m-dots"></span><span class="m-price">2.80€</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="sub-category-block">
+                            <h3 class="sub-cat-title" data-i18n="sub_alcohol">Alkoholna pića i vino</h3>
+                            <ul class="menu-items-list" data-item-name="Mamut Pilsner pivo 330ml" data-item-desc="" data-item-price="3.60€">
+                                <li><span class="m-name">Mamut Pilsner pivo 330ml</span><span class="m-dots"></span><span class="m-price">3.60€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Jelički Dukat Šljiva 40ml" data-item-desc="" data-item-price="4.50€">
+                                <li><span class="m-name">Jelički Dukat Šljiva 40ml</span><span class="m-dots"></span><span class="m-price">4.50€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Prosseco 200ml" data-item-desc="" data-item-price="4.50€">
+                                <li><span class="m-name">Prosseco 200ml</span><span class="m-dots"></span><span class="m-price">4.50€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Gin & Tonic 350ml" data-item-desc="" data-item-price="5.50€">
+                                <li><span class="m-name">Gin & Tonic 350ml</span><span class="m-dots"></span><span class="m-price">5.50€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Espresso Martini 200ml" data-item-desc="rum, salted caramel syrup, espresso, kahlua" data-item-price="7.50€">
+                                <li><span class="m-name">Espresso Martini 200ml</span><span class="m-dots"></span><span class="m-price">7.50€</span></li>
+                                <li class="m-desc">rum, salted caramel syrup, espresso, kahlua</li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Mionetto Prosecco DOC Treviso Brut 0.15l" data-item-desc="" data-item-price="3.80€">
+                                <li><span class="m-name">Mionetto Prosecco DOC Treviso Brut 0.15l</span><span class="m-dots"></span><span class="m-price">3.80€</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="sub-category-block">
+                            <h3 class="sub-cat-title" data-i18n="sub_addons">Dodaci</h3>
+                            <ul class="menu-items-list" data-item-name="Sojino mlijeko" data-item-desc="" data-item-price="0.60€">
+                                <li><span class="m-name">Sojino mlijeko</span><span class="m-dots"></span><span class="m-price">0.60€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Ovseno mlijeko" data-item-desc="" data-item-price="0.60€">
+                                <li><span class="m-name">Ovseno mlijeko</span><span class="m-dots"></span><span class="m-price">0.60€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Bademovo mlijeko" data-item-desc="" data-item-price="0.80€">
+                                <li><span class="m-name">Bademovo mlijeko</span><span class="m-dots"></span><span class="m-price">0.80€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Ekstra shot espresso 250gr" data-item-desc="" data-item-price="1.00€">
+                                <li><span class="m-name">Ekstra shot espresso 250gr</span><span class="m-dots"></span><span class="m-price">1.00€</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Category 2: Food -->
+                    <div class="menu-category-content" id="cat-food">
+                        <div class="sub-category-block">
+                            <h3 class="sub-cat-title" data-i18n="sub_sandwiches">Sendviči</h3>
+                            <ul class="menu-items-list" data-item-name="Sendvič pršuta 300gr" data-item-desc="pršuta Marco Polo, dimljena mocarela, pesto sos, rukola, sirni namaz" data-item-price="4.30€">
+                                <li><span class="m-name">Sendvič pršuta 300gr</span><span class="m-dots"></span><span class="m-price">4.30€</span></li>
+                                <li class="m-desc">pršuta Marco Polo, dimljena mocarela, pesto sos, rukola, sirni namaz</li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Sendvič mortadela 300gr" data-item-desc="Mortadella Bologna sa pistaćima, krem sir, mocarela, pesto sos, svježi bosiljak, aceto balsamico" data-item-price="4.30€">
+                                <li><span class="m-name">Sendvič mortadela 300gr</span><span class="m-dots"></span><span class="m-price">4.30€</span></li>
+                                <li class="m-desc">Mortadella Bologna sa pistaćima, krem sir, mocarela, pesto sos, svježi bosiljak, aceto balsamico</li>
+                            </ul>
+                        </div>
+
+                        <div class="sub-category-block">
+                            <h3 class="sub-cat-title" data-i18n="sub_cakes">Kolači</h3>
+                            <ul class="menu-items-list" data-item-name="Tiramisu 200gr" data-item-desc="" data-item-price="3.20€">
+                                <li><span class="m-name">Tiramisu 200gr</span><span class="m-dots"></span><span class="m-price">3.20€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Toffee Caramel Cheesecake 150gr" data-item-desc="" data-item-price="3.20€">
+                                <li><span class="m-name">Toffee Caramel Cheesecake 150gr</span><span class="m-dots"></span><span class="m-price">3.20€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Pistachio cheesecake 150gr" data-item-desc="" data-item-price="3.20€">
+                                <li><span class="m-name">Pistachio cheesecake 150gr</span><span class="m-dots"></span><span class="m-price">3.20€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Strawberry cheesecake 150gr" data-item-desc="" data-item-price="3.20€">
+                                <li><span class="m-name">Strawberry cheesecake 150gr</span><span class="m-dots"></span><span class="m-price">3.20€</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="sub-category-block">
+                            <h3 class="sub-cat-title" data-i18n="sub_pastries">Peciva i kroasani</h3>
+                            <ul class="menu-items-list" data-item-name="Kroasan 65gr" data-item-desc="" data-item-price="1.50€">
+                                <li><span class="m-name">Kroasan 65gr</span><span class="m-dots"></span><span class="m-price">1.50€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Čokoladni kroasan 80gr" data-item-desc="" data-item-price="2.00€">
+                                <li><span class="m-name">Čokoladni kroasan 80gr</span><span class="m-dots"></span><span class="m-price">2.00€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Vanila kroasan 80gr" data-item-desc="" data-item-price="2.60€">
+                                <li><span class="m-name">Vanila kroasan 80gr</span><span class="m-dots"></span><span class="m-price">2.60€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Pistaći kroasan 120gr" data-item-desc="" data-item-price="3.30€">
+                                <li><span class="m-name">Pistaći kroasan 120gr</span><span class="m-dots"></span><span class="m-price">3.30€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Caprese kroasan 🥦 120gr" data-item-desc="mocarela, pesto, cherry paradajz, svježi bosiljak" data-item-price="3.40€">
+                                <li><span class="m-name">Caprese kroasan 🥦 120gr</span><span class="m-dots"></span><span class="m-price">3.40€</span></li>
+                                <li class="m-desc">mocarela, pesto, cherry paradajz, svježi bosiljak</li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Avokado-losos kroasan 🥦 120gr" data-item-desc="avokado, dimljeni file lososa, krem sir, cherry paradajz, domaći sos, biber" data-item-price="4.20€">
+                                <li><span class="m-name">Avokado-losos kroasan 🥦 120gr</span><span class="m-dots"></span><span class="m-price">4.20€</span></li>
+                                <li class="m-desc">avokado, dimljeni file lososa, krem sir, cherry paradajz, domaći sos, biber</li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Chorizo kroasan 250gr" data-item-desc="chorizo salama, svježa mocarela, zelena salata, sušeni paradajz, domaći namaz" data-item-price="3.90€">
+                                <li><span class="m-name">Chorizo kroasan 250gr</span><span class="m-dots"></span><span class="m-price">3.90€</span></li>
+                                <li class="m-desc">chorizo salama, svježa mocarela, zelena salata, sušeni paradajz, domaći namaz</li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Ćuretina kroasan 250gr" data-item-desc="dimljena ćuretina, svježa mocarela, jaje, domaći namaz" data-item-price="3.80€">
+                                <li><span class="m-name">Ćuretina kroasan 250gr</span><span class="m-dots"></span><span class="m-price">3.80€</span></li>
+                                <li class="m-desc">dimljena ćuretina, svježa mocarela, jaje, domaći namaz</li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Krofna 70gr" data-item-desc="slana karamela / jagoda" data-item-price="2.00€">
+                                <li><span class="m-name">Krofna 70gr</span><span class="m-dots"></span><span class="m-price">2.00€</span></li>
+                                <li class="m-desc">slana karamela / jagoda</li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Domaća krofna PISTAĆI 200gr" data-item-desc="" data-item-price="2.60€">
+                                <li><span class="m-name">Domaća krofna PISTAĆI 200gr</span><span class="m-dots"></span><span class="m-price">2.60€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Domaća krofna ČOKOLADA 200gr" data-item-desc="Crna čokolada" data-item-price="2.60€">
+                                <li><span class="m-name">Domaća krofna ČOKOLADA 200gr</span><span class="m-dots"></span><span class="m-price">2.60€</span></li>
+                                <li class="m-desc">Crna čokolada</li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Domaća krofna JAGODA 120g" data-item-desc="" data-item-price="2.60€">
+                                <li><span class="m-name">Domaća krofna JAGODA 120g</span><span class="m-dots"></span><span class="m-price">2.60€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Cookie 80gr" data-item-desc="Čokoladni" data-item-price="1.80€">
+                                <li><span class="m-name">Cookie 80gr</span><span class="m-dots"></span><span class="m-price">1.80€</span></li>
+                                <li class="m-desc">Čokoladni</li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Lemon bread 50gr" data-item-desc="" data-item-price="1.40€">
+                                <li><span class="m-name">Lemon bread 50gr</span><span class="m-dots"></span><span class="m-price">1.40€</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Category 3: Beans & Equipment -->
+                    <div class="menu-category-content" id="cat-beans">
+                        <div class="sub-category-block">
+                            <h3 class="sub-cat-title" data-i18n="sub_beans">KAFA U ZRNU</h3>
+                            <ul class="menu-items-list" data-item-name="Blend IV 100gr" data-item-desc="(100% arabika - Guatemala, El Salvador, Brazil, India)" data-item-price="6.80€">
+                                <li><span class="m-name">Blend IV 100gr</span><span class="m-dots"></span><span class="m-price">6.80€</span></li>
+                                <li class="m-desc">(100% arabika - Guatemala, El Salvador, Brazil, India)</li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Kenya Muthigi - Ini Microlot 100gr" data-item-desc="Regija: Kirinyaga; Sorte: SL-28, Ruiru 11; Note: citrus, zelena jabuka, karamela, bijela čokolada; Tijelo: srednje; Kisjelost: visoka; Proces: prani; Nadmorska visina: 1600m; Prženje: srednje" data-item-price="10.00€">
+                                <li><span class="m-name">Kenya Muthigi - Ini Microlot 100gr</span><span class="m-dots"></span><span class="m-price">10.00€</span></li>
+                                <li class="m-desc">Regija: Kirinyaga; Sorte: SL-28, Ruiru 11; Note: citrus, zelena jabuka, karamela, bijela čokolada; Tijelo: srednje; Kisjelost: visoka; Proces: prani; Nadmorska visina: 1600m; Prženje: srednje</li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Columbia Narino 100gr" data-item-desc="Regija: Narino; Sorte: Caturra i Catuai; Note: Cimet, kardamom, suvo voće, brusnica; Tijelo: srednje; Kisjelost: srednja; Proces: prani; Nadmorska visina: 1600-1800m; Prženje: srednje" data-item-price="12.80€">
+                                <li><span class="m-name">Columbia Narino 100gr</span><span class="m-dots"></span><span class="m-price">12.80€</span></li>
+                                <li class="m-desc">Regija: Narino; Sorte: Caturra i Catuai; Note: Cimet, kardamom, suvo voće, brusnica; Tijelo: srednje; Kisjelost: srednja; Proces: prani; Nadmorska visina: 1600-1800m; Prženje: srednje</li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Premium Domaća mljevena kafa 200gr" data-item-desc="" data-item-price="3.20€">
+                                <li><span class="m-name">Premium Domaća mljevena kafa 200gr</span><span class="m-dots"></span><span class="m-price">3.20€</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="sub-category-block">
+                            <h3 class="sub-cat-title" data-i18n="sub_hario">HARIO PROIZVODI</h3>
+                            <ul class="menu-items-list" data-item-name="Paper Filters 100kom" data-item-desc="" data-item-price="9.50€">
+                                <li><span class="m-name">Paper Filters 100kom</span><span class="m-dots"></span><span class="m-price">9.50€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Range Server 360ml" data-item-desc="" data-item-price="14.50€">
+                                <li><span class="m-name">Range Server 360ml</span><span class="m-dots"></span><span class="m-price">14.50€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="Range Server 600ml" data-item-desc="" data-item-price="28.00€">
+                                <li><span class="m-name">Range Server 600ml</span><span class="m-dots"></span><span class="m-price">28.00€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="V60 Ceramic Dripper" data-item-desc="" data-item-price="27.50€">
+                                <li><span class="m-name">V60 Ceramic Dripper</span><span class="m-dots"></span><span class="m-price">27.50€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="MUGEN Ceramic Dripper" data-item-desc="" data-item-price="31.00€">
+                                <li><span class="m-name">MUGEN Ceramic Dripper</span><span class="m-dots"></span><span class="m-price">31.00€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="HARIO Drip Scale" data-item-desc="" data-item-price="68.00€">
+                                <li><span class="m-name">HARIO Drip Scale</span><span class="m-dots"></span><span class="m-price">68.00€</span></li>
+                            </ul>
+                            <ul class="menu-items-list" data-item-name="SHIZUKU Slow Dripper" data-item-desc="" data-item-price="75.00€">
+                                <li><span class="m-name">SHIZUKU Slow Dripper</span><span class="m-dots"></span><span class="m-price">75.00€</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact" style="background-image: url('assets/img_05.jpg');">
+            <div class="contact-backdrop"></div>
+            <div class="container contact-grid">
+                <div class="contact-text-col">
+                    <h2 class="section-title" data-i18n="contact_heading">Naše lokacije</h2>
+                    <p class="contact-body" data-i18n="contact_body">
+                        Posetite nas na nekoj od 5 lokacija u Podgorici i Herceg-Novom. Uživajte u našoj kafi na licu mesta ili naručite dostavu putem Glova.
+                    </p>
+
+                    <div class="locations-list" id="locationsList">
+                        <div class="loc-item active" data-map="https://maps.google.com/?q=bb+Bracana+Bracanovića,+Podgorica+81000">
+                            <span class="loc-city">Podgorica</span>
+                            <p class="loc-address">bb Bracana Bracanovića, Podgorica 81000, Черногория</p>
+                        </div>
+                        <div class="loc-item" data-map="https://maps.google.com/?q=27+Moskovska,+Podgorica+81000">
+                            <span class="loc-city">Podgorica</span>
+                            <p class="loc-address">27 Moskovska, Podgorica 81000, Черногория</p>
+                        </div>
+                        <div class="loc-item" data-map="https://maps.google.com/?q=23+Novaka+Miloševa,+Podgorica+81000">
+                            <span class="loc-city">Podgorica</span>
+                            <p class="loc-address">23 Novaka Miloševa, Podgorica 81000, Черногория</p>
+                        </div>
+                        <div class="loc-item" data-map="https://maps.google.com/?q=C7V7+8H9,+Bulevar+Ivana+Crnojevića,+Podgorica">
+                            <span class="loc-city">Podgorica</span>
+                            <p class="loc-address">C7V7+8H9, Bulevar Ivana Crnojevića, Podgorica, Черногория</p>
+                        </div>
+                        <div class="loc-item" data-map="https://maps.google.com/?q=13+Njegoševa,+Herceg+-+Novi+85340">
+                            <span class="loc-city">Herceg-Novi</span>
+                            <p class="loc-address">13 Njegoševa, Herceg - Novi 85340, Черногория</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-action-col">
+                    <div class="delivery-card">
+                        <h3 data-i18n="delivery_title">Brza dostava & Kontakt</h3>
+                        <p data-i18n="delivery_subtitle">Naručite odmah ili nas kontaktirajte</p>
+                        <div class="delivery-buttons">
+                            <a href="https://glovoapp.com/sr/me/podgorica/stores/fabrika-coffee-pdg?utm_medium=organic&utm_campaign=google_reserve_place_order_action&utm_source=google" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-i18n="hero_cta_primary">Naruči preko Glova</a>
+                            <a href="tel:+38269990922" class="btn btn-secondary">+382 69 990 922</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-top-row">
+            <div class="footer-col">
+                <h4 data-i18n="nav_menu">Meni</h4>
+                <a href="#menu" data-i18n="menu_cat_drinks">Kafa & Napici</a>
+                <a href="#menu" data-i18n="menu_cat_food">Hrana & Peciva</a>
+                <a href="#menu" data-i18n="menu_cat_beans">Kafa u Zrnu & Hario</a>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="social_label">Pratite nas</h4>
+                <a href="https://www.instagram.com/fabrikacoffeecg?igsh=MWw1bjM3cmU0ZW1ldA==" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://glovoapp.com/sr/me/podgorica/stores/fabrika-coffee-pdg?utm_medium=organic&utm_campaign=google_reserve_place_order_action&utm_source=google" target="_blank" rel="noopener noreferrer">Glovo</a>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="contact_heading">Lokacije</h4>
+                <p>Podgorica & Herceg-Novi</p>
+                <p>+382 69 990 922</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom-brutalist">
+            <div class="container footer-bottom-flex">
+                <p data-i18n="footer_copyright">© Fabrika Coffee. Sva prava zadržana.</p>
+            </div>
+            <div class="giant-marquee">
+                <span>FABRIKA COFFEE FABRIKA COFFEE FABRIKA COFFEE</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
